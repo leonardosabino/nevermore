@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://sprites/background/starter_2.jpg" type="Texture" id=1]
+[ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/starter.gd" type="Script" id=3]
+[ext_resource path="res://sprites/background/instructions.png" type="Texture" id=4]
+[ext_resource path="res://scripts/instruction.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 1
+outline_color = Color( 0.027451, 0.0156863, 0.0156863, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 75
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="starter" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 3 )
+
+[node name="starter" type="Sprite" parent="."]
+modulate = Color( 0.831373, 0.831373, 0.831373, 1 )
+position = Vector2( 511, 300 )
+scale = Vector2( 0.801562, 0.75 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="enter_start" type="Label" parent="."]
+margin_left = 296.0
+margin_top = 440.0
+margin_right = 726.0
+margin_bottom = 529.0
+rect_pivot_offset = Vector2( -112, 16 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.733333, 0.207843, 0.207843, 1 )
+text = "PRESS ENTER TO START"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="instruction" type="TextureButton" parent="."]
+modulate = Color( 0.6, 0.6, 0.6, 1 )
+margin_left = 912.0
+margin_top = 64.0
+margin_right = 960.0
+margin_bottom = 112.0
+texture_normal = ExtResource( 4 )
+expand = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="first_time" type="Label" parent="."]
+margin_left = 880.0
+margin_top = 16.0
+margin_right = 1008.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.733333, 0.207843, 0.207843, 1 )
+text = "First Time?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+margin_left = 72.0
+margin_top = 104.0
+margin_right = 360.0
+margin_bottom = 248.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "NEVERMORE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
