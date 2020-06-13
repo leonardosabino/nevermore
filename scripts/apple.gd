@@ -23,7 +23,7 @@ func _process(delta):
 	seconds += delta
 	
 	if seconds > 15:
-		vel_plus += 0.5
+		vel_plus += 0.3
 		seconds = 0
 		pass
 	
