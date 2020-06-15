@@ -17,9 +17,12 @@ func _process(delta):
 		set_text("I've seen better")
 		
 	if (score >= 100 && score < 150):
+		set_text("At least you at the end of the song")
+		
+	if (score >= 150 && score < 200):
 		set_text("Not so bad")
 		
-	if (score > 200):
+	if (score >= 200):
 		set_text("NEVERMORE!")
 	
 	pass
