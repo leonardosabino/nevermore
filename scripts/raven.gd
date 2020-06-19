@@ -75,7 +75,7 @@ func _create_timer():
 	var timer = Timer.new()
 	timer.set_one_shot(true)
 	timer.set_wait_time(1)
-	timer.connect("timeout", self, "_on_timeout")
+	timer.connect("timeout", self, "_on_timeout", [], CONNECT_DEFERRED)
 	add_child(timer)
 	timer.start()
 	pass
@@ -83,6 +83,6 @@ func _create_timer():
 func _on_timeout():
 	var gameOver = gameOverLoad.instance()
 	gameOver.set_global_position(Vector2(0,0))
-	get_node("/root/main/game").queue_free();
 	get_node("/root/main").add_child(gameOver)
+	get_node("/root/main/game").free();
 	pass
