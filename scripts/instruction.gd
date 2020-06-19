@@ -1,5 +1,5 @@
 extends TextureButton
-var instructions = preload("res://scenes/instructions.tscn")
+var instructions = load("res://scenes/instructions.tscn")
 
 func _ready():
 	self.connect("pressed", self, "on_pressed")

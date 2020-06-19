@@ -1,20 +1,18 @@
 extends KinematicBody2D
 
-var motion = Vector2()
-const SPEED = 500
 enum {LEFT, RIGHT}
-var direction = RIGHT
-var game_over = preload("res://scenes/game-over.tscn")
-var timer = 0
-var timeout = false
-var timerover = false
+const SPEED = 500
 
-func _physics_process(delta):
-	timer = Timer.new()
-	timer.set_one_shot(true)
-	timer.set_wait_time(1)
-	timer.connect("timeout", self, "on_timeout_complete")
-	add_child(timer)
+var motion = Vector2()
+var direction = RIGHT
+var gameOverLoad = load("res://scenes/game-over.tscn")
+
+func _physics_process(delta):	
+	_move_raven();
+	_collision_shape();
+	pass
+	
+func _move_raven():
 	if (!get_tree().paused):
 		var x = 0
 		var y = 0
@@ -56,28 +54,35 @@ func _physics_process(delta):
 		motion.y = y * SPEED
 		move_and_slide(motion)
 	pass
+	pass
+
+func _collision_shape():
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-		if collision.collider.name == "AppleBody" && !timerover:
-			timer.start()
+		if collision.collider.name == "AppleBody":
 			get_tree().paused = true
+			_create_timer();
 			if direction == RIGHT:
 				$Sprite.play("dead-right")
 			else:
 				$Sprite.play("dead-left")
 			pass
-			
-			if (timeout):
-				var gameover = game_over.instance()
-				gameover.set_global_position(Vector2(0,0))
-				get_node("../").add_child(gameover)
-				timerover = true
-				get_parent().remove_child(self)
 		pass
 	pass
-	
 	pass
 
-func on_timeout_complete():
-	timeout = true
+func _create_timer():
+	var timer = Timer.new()
+	timer.set_one_shot(true)
+	timer.set_wait_time(1)
+	timer.connect("timeout", self, "_on_timeout")
+	add_child(timer)
+	timer.start()
+	pass
+
+func _on_timeout():
+	var gameOver = gameOverLoad.instance()
+	gameOver.set_global_position(Vector2(0,0))
+	get_node("/root/main/game").queue_free();
+	get_node("/root/main").add_child(gameOver)
 	pass

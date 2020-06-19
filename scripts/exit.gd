@@ -10,5 +10,5 @@ func _process(delta):
 	pass
 	
 func on_pressed():
-	get_node("../../").remove_child(get_parent())
+	get_node("../").queue_free()
 	pass
