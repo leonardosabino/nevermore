@@ -57,18 +57,18 @@ func _move_raven():
 	pass
 
 func _collision_shape():
-	for i in get_slide_count():
-		var collision = get_slide_collision(i)
-		if collision.collider.name == "AppleBody":
-			get_tree().paused = true
-			_create_timer();
-			if direction == RIGHT:
-				$Sprite.play("dead-right")
-			else:
-				$Sprite.play("dead-left")
-			pass
-		pass
-	pass
+#	for i in get_slide_count():
+#		var collision = get_slide_collision(i)
+#		if collision.collider.name == "AppleBody":
+#			get_tree().paused = true
+#			_create_timer();
+#			if direction == RIGHT:
+#				$Sprite.play("dead-right")
+#			else:
+#				$Sprite.play("dead-left")
+#			pass
+#		pass
+#	pass
 	pass
 
 func _create_timer():
