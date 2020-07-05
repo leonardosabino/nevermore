@@ -23,7 +23,11 @@ func _process(delta):
 func _difficult_frequency(score):
 	var x = score / 15
 	if x > 10:
+		return 0.1
+	if x > 7:
 		return 0.2
+	if x > 4:
+		return 0.3
 	else:
 		return 0.5
 	pass

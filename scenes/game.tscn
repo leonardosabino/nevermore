@@ -17,6 +17,7 @@ extents = Vector2( 38.619, 384.365 )
 script = ExtResource( 7 )
 
 [node name="raven" parent="." instance=ExtResource( 1 )]
+position = Vector2( 550, 600 )
 
 [node name="score" parent="." instance=ExtResource( 3 )]
 pause_mode = 1
@@ -81,13 +82,10 @@ __meta__ = {
 }
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 511.333, 299.556 )
-scale = Vector2( 0.794646, 0.82321 )
+position = Vector2( 511.576, 298.295 )
+scale = Vector2( 0.799206, 0.826712 )
 z_index = -2
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="game_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

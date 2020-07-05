@@ -49,26 +49,38 @@ func _move_raven():
 			y = 1
 		elif Input.is_action_pressed("ui_up"):
 			y = -1
-	
+			
 		motion.x = x * SPEED
 		motion.y = y * SPEED
 		move_and_slide(motion)
+		
+		if Input.is_action_pressed('click'):
+			var target = get_global_mouse_position()
+			var velocity = (target - position).normalized() * SPEED
+			if (target - position).length() > 50:
+				move_and_slide(velocity)
+				if (velocity.x > 0):
+					$Sprite.play("fly-right")
+				else:
+					x = -1
+					$Sprite.play("fly-left")
+			
 	pass
 	pass
 
 func _collision_shape():
-#	for i in get_slide_count():
-#		var collision = get_slide_collision(i)
-#		if collision.collider.name == "AppleBody":
-#			get_tree().paused = true
-#			_create_timer();
-#			if direction == RIGHT:
-#				$Sprite.play("dead-right")
-#			else:
-#				$Sprite.play("dead-left")
-#			pass
-#		pass
-#	pass
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.name == "AppleBody":
+			get_tree().paused = true
+			_create_timer();
+			if direction == RIGHT:
+				$Sprite.play("dead-right")
+			else:
+				$Sprite.play("dead-left")
+			pass
+		pass
+	pass
 	pass
 
 func _create_timer():
