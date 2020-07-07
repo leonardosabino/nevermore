@@ -54,27 +54,27 @@
 [ext_resource path="res://sprites/raven/right/raven-black0025.png" type="Texture" id=52]
 [ext_resource path="res://scripts/raven.gd" type="Script" id=53]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 48 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 43 ), ExtResource( 25 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 21 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 26 ), ExtResource( 1 ), ExtResource( 39 ), ExtResource( 24 ), ExtResource( 19 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 44 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 47 ), ExtResource( 17 ), ExtResource( 36 ) ],
 "loop": true,
 "name": "fly-left",
 "speed": 80.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 37 ), ExtResource( 10 ), ExtResource( 30 ), ExtResource( 15 ), ExtResource( 38 ), ExtResource( 50 ), ExtResource( 11 ), ExtResource( 51 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 27 ), ExtResource( 41 ), ExtResource( 29 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 49 ), ExtResource( 52 ) ],
+"frames": [ ExtResource( 35 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "fly-right",
-"speed": 80.0
+"name": "dead-right",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "dead-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 35 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 37 ), ExtResource( 10 ), ExtResource( 30 ), ExtResource( 15 ), ExtResource( 38 ), ExtResource( 50 ), ExtResource( 11 ), ExtResource( 51 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 27 ), ExtResource( 41 ), ExtResource( 29 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 49 ), ExtResource( 52 ) ],
 "loop": true,
-"name": "dead-right",
-"speed": 5.0
+"name": "fly-right",
+"speed": 80.0
 } ]
 
 [node name="raven" type="KinematicBody2D"]
@@ -86,9 +86,9 @@ script = ExtResource( 53 )
 pause_mode = 2
 position = Vector2( 7.79536, -48.1085 )
 scale = Vector2( 0.11297, 0.112348 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "fly-right"
-frame = 20
+frame = 7
 playing = true
 __meta__ = {
 "_edit_group_": true,
@@ -97,7 +97,7 @@ __meta__ = {
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -101.519, -34.0433 )
-polygon = PoolVector2Array( 72.538, -17.7245, 70.4143, -10.1735, 75.3696, -2.62251, 98.9665, -3.56639, 89.8052, 2.72515, 99.1597, 7.40237, 110.073, -2.17479, 133.905, -8.63381, 145.452, -5.21817, 130.341, -18.8791, 104.951, -29.5699, 89.0558, -13.0051 )
+polygon = PoolVector2Array( 75.0222, -16.8445, 70.4143, -10.1735, 74.7862, -4.33814, 98.9665, -3.56639, 89.8052, 2.72515, 99.1597, 7.40237, 110.073, -2.17479, 133.905, -8.63381, 145.452, -5.21817, 130.341, -18.8791, 104.951, -29.5699, 89.0558, -13.0051 )
 __meta__ = {
 "_edit_lock_": true
 }

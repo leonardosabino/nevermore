@@ -77,7 +77,7 @@ margin_bottom = 336.0
 rect_pivot_offset = Vector2( 248, 56 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.717647, 0.717647, 0.717647, 1 )
-text = "- Arrows to move
+text = "- Arrows or click to move
 - ESC to Pause
 - Enter to play again after gameover"
 __meta__ = {
