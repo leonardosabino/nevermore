@@ -5,7 +5,7 @@ const SPEED = 500
 
 var motion = Vector2()
 var direction = RIGHT
-var gameOverLoad = load("res://scenes/game-over.tscn")
+var gameOverLoad = load("res://scenes/gameOver.tscn")
 
 func _physics_process(delta):	
 	_move_raven();

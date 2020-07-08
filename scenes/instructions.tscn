@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://scripts/exit.gd" type="Script" id=3]
-[ext_resource path="res://sprites/background/close.png" type="Texture" id=4]
+[ext_resource path="res://assets/icons/icon.png" type="Texture" id=2]
+[ext_resource path="res://scripts/exitInstruction.gd" type="Script" id=3]
+[ext_resource path="res://assets/icons/close.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50

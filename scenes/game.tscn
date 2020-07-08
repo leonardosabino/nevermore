@@ -3,15 +3,15 @@
 [ext_resource path="res://scenes/raven.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/appleSpawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/score.tscn" type="PackedScene" id=3]
-[ext_resource path="res://sprites/background/background_3.jpg" type="Texture" id=4]
-[ext_resource path="res://samples/game.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/background/game.jpg" type="Texture" id=4]
+[ext_resource path="res://audios/game.wav" type="AudioStream" id=5]
 [ext_resource path="res://scripts/game.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 511.78, 51.7867 )
+extents = Vector2( 511.78, 3.61887 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 38.619, 384.365 )
+extents = Vector2( 5.21461, 300.257 )
 
 [node name="game" type="Node2D"]
 script = ExtResource( 7 )
@@ -26,10 +26,9 @@ position = Vector2( 29.4657, 0 )
 [node name="walls" type="Node" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="walls"]
-position = Vector2( 512, 648 )
+position = Vector2( 512.63, 598.548 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D"]
@@ -40,10 +39,9 @@ __meta__ = {
 }
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="walls"]
-position = Vector2( 511.713, -51.5954 )
+position = Vector2( 512.973, -4.03337 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D2"]
@@ -54,10 +52,9 @@ __meta__ = {
 }
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="walls"]
-position = Vector2( -41.5272, 303.578 )
+position = Vector2( -8.34718, 300.249 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D3"]
@@ -68,10 +65,9 @@ __meta__ = {
 }
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="walls"]
-position = Vector2( 1058.23, 300.714 )
+position = Vector2( 1025.31, 300.583 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D4"]
