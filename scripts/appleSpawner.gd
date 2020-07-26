@@ -9,7 +9,6 @@ func _ready():
 
 
 func _process(delta):
-	
 	if interval > 0:
 		interval -= delta
 	else:

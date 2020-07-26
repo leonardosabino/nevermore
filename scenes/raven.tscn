@@ -54,7 +54,6 @@
 [ext_resource path="res://assets/raven/right/raven-black0025.png" type="Texture" id=52]
 [ext_resource path="res://scripts/raven.gd" type="Script" id=53]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 48 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 43 ), ExtResource( 25 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 21 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 26 ), ExtResource( 1 ), ExtResource( 39 ), ExtResource( 24 ), ExtResource( 19 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 44 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 47 ), ExtResource( 17 ), ExtResource( 36 ) ],
@@ -67,14 +66,14 @@ animations = [ {
 "name": "fly-right",
 "speed": 80.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "dead-left",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 35 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "dead-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "dead-left",
 "speed": 5.0
 } ]
 
@@ -92,7 +91,7 @@ position = Vector2( 7.79536, -48.1085 )
 scale = Vector2( 0.11297, 0.112348 )
 frames = SubResource( 1 )
 animation = "fly-right"
-frame = 18
+frame = 21
 playing = true
 __meta__ = {
 "_edit_group_": true,
