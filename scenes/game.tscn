@@ -1,17 +1,24 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/raven.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/appleSpawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/score.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background/game.jpg" type="Texture" id=4]
 [ext_resource path="res://audios/game.wav" type="AudioStream" id=5]
+[ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scripts/game.gd" type="Script" id=7]
+[ext_resource path="res://scripts/pauseButton.gd" type="Script" id=8]
+[ext_resource path="res://scripts/pauseLabel.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 511.78, 3.61887 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.21461, 300.257 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 6 )
 
 [node name="game" type="Node2D"]
 script = ExtResource( 7 )
@@ -88,3 +95,31 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="appleSpawner" parent="." instance=ExtResource( 2 )]
+
+[node name="pause" type="Node" parent="."]
+
+[node name="pauseLabel" type="Label" parent="pause"]
+pause_mode = 2
+margin_left = 902.895
+margin_top = 18.1862
+margin_right = 977.895
+margin_bottom = 72.1862
+custom_fonts/font = SubResource( 3 )
+text = "Pause?"
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="pauseButton" type="TextureButton" parent="pause"]
+pause_mode = 2
+margin_left = 887.633
+margin_top = 21.3674
+margin_right = 1008.63
+margin_bottom = 69.3674
+mouse_default_cursor_shape = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
