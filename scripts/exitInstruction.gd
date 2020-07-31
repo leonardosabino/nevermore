@@ -5,10 +5,8 @@ func _ready():
 	pass 
 
 func _process(delta):
-	if Input.is_action_pressed("ui_cancel"):
-		on_pressed()
 	pass
 	
 func on_pressed():
-	get_node("../").queue_free()
+	get_node("/root/main/instructions").queue_free()
 	pass
