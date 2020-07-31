@@ -60,8 +60,10 @@ func _move_raven():
 			if (target - position).length() > 50:
 				move_and_slide(velocity)
 				if (velocity.x > 0):
+					direction = RIGHT
 					$Sprite.play("fly-right")
 				else:
+					direction = LEFT
 					x = -1
 					$Sprite.play("fly-left")
 			
