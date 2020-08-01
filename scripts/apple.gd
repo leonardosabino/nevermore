@@ -23,7 +23,7 @@ func _process(delta):
 		rotate(-3 * delta)
 	pass
 	
-	velPlus = 1 + ((int(main.score) / 15) * 0.3)
+	velPlus = 1 + (int(main.score) / 15) * 0.3
 	
 	translate(down * vel * delta * velPlus)
 	

@@ -5,7 +5,7 @@ var starterScene = load("res://scenes/starter.tscn")
 func _ready():
 	pass 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_enter") || Input.is_action_just_pressed("click"):
 		var starterInstance = starterScene.instance()
 		get_node("/root/main").add_child(starterInstance)

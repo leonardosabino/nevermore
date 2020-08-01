@@ -6,7 +6,7 @@ func _ready():
 	score = main.score
 	pass 
 
-func _process(delta):
+func _process(_delta):
 	if (score < 10):
 		set_text("Am i a joke to you?")
 		

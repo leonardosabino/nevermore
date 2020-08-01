@@ -7,7 +7,7 @@ var motion = Vector2()
 var direction = RIGHT
 var gameOverLoad = load("res://scenes/gameOver.tscn")
 
-func _physics_process(delta):	
+func _physics_process(_delta):	
 	_move_raven();
 	_collision_shape();
 	pass
