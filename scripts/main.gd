@@ -1,6 +1,7 @@
 extends Node2D
 	
 var score = 0 setget setScore
+var volume = 6
 signal score_changed
 
 func _process(delta):

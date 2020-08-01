@@ -1,12 +1,23 @@
 extends TextureButton
 
+var pauseScene = load("res://scenes/pause.tscn")
+
 func _ready():
-	self.connect("pressed", self, "on_pressed")
+	self.connect("button_down", self, "on_pressed")
 	pass
 
-func _process(delta):
+func on_pressed():
+	_pause_menu()
 	pass
 	
-func on_pressed():
-	Input.action_press("ui_cancel", 1)
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		_pause_menu()
+	pass
+
+func _pause_menu():
+	if (get_node("/root/main/").has_node("pause") == false): 
+		get_node("/root/main/").add_child(pauseScene.instance())
+	else:
+		get_node("/root/main/pause").queue_free()
 	pass

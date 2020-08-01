@@ -17,7 +17,6 @@ func _process(delta):
 		pass
 	pass
 
-
 func _exit_tree():
 	if !free:
 		starter.free()

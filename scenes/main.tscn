@@ -8,4 +8,3 @@ pause_mode = 1
 script = ExtResource( 2 )
 
 [node name="starter" parent="." instance=ExtResource( 55 )]
-pause_mode = 1

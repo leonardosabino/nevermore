@@ -7,7 +7,5 @@ func _ready():
 
 func on_pressed():
 	if get_node("/root/main/").has_node("instructions") == false:
-		var modal = instructions.instance()
-
-		get_node("/root/main/").add_child(modal)
+		get_node("/root/main/").add_child(instructions.instance())
 	pass

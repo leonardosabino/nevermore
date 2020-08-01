@@ -9,3 +9,6 @@ func _process(delta):
 		get_tree().paused = false
 		queue_free()
 	pass
+
+func _exit_tree():
+	get_tree().paused = false
