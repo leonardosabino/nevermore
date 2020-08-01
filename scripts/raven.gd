@@ -96,7 +96,6 @@ func _create_timer():
 
 func _on_timeout():
 	var gameOver = gameOverLoad.instance()
-	gameOver.set_global_position(Vector2(0,0))
 	get_node("/root/main").add_child(gameOver)
 	get_node("/root/main/game").free();
 	pass

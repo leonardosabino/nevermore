@@ -16,7 +16,7 @@ func _process(delta):
 	pass
 
 func _pause_menu():
-	if (get_node("/root/main/").has_node("pause") == false): 
+	if (!get_node("/root/main/").has_node("pause")): 
 		get_node("/root/main/").add_child(pauseScene.instance())
 	else:
 		get_node("/root/main/pause").queue_free()

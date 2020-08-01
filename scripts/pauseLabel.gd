@@ -4,7 +4,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	if (get_tree().paused):
+	if (get_node("/root/main/").has_node("pause")):
 		set_text('Unpause?')
 	else:
 		set_text('Pause?')

@@ -8,14 +8,6 @@
 [ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://audios/gameOver.wav" type="AudioStream" id=7]
 
-
-
-
-
-
-
-
-
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 6 )
