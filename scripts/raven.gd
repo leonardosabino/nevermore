@@ -76,6 +76,7 @@ func _collision_shape():
 		if collision.collider.name == "AppleBody":
 			get_tree().paused = true
 			_create_timer();
+			get_node("/root/main/game/game_music/").stream_paused = true
 			if direction == RIGHT:
 				$Sprite.play("dead-right")
 			else:

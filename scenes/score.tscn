@@ -5,7 +5,6 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
-outline_size = 1
 font_data = ExtResource( 2 )
 
 [node name="score" type="Node2D"]
@@ -15,7 +14,7 @@ pause_mode = 1
 margin_right = 296.0
 margin_bottom = 160.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Time: 0"
 script = ExtResource( 3 )
 __meta__ = {
