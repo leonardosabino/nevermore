@@ -3,7 +3,9 @@
 [ext_resource path="res://scripts/main.gd" type="Script" id=2]
 [ext_resource path="res://scenes/starter.tscn" type="PackedScene" id=55]
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" groups=[
+"save",
+]]
 pause_mode = 1
 script = ExtResource( 2 )
 
