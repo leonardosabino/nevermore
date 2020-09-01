@@ -1,11 +1,8 @@
 extends Label
 
 func _ready():
+	set_text('Pause?')	
 	pass
 
 func _process(_delta):
-	if (get_node("/root/main/").has_node("pause")):
-		set_text('Unpause?')
-	else:
-		set_text('Pause?')
 	pass

@@ -87,6 +87,9 @@ position = Vector2( 511.576, 298.295 )
 scale = Vector2( 0.799206, 0.826712 )
 z_index = -2
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="game_music" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
@@ -99,6 +102,7 @@ autoplay = true
 
 [node name="pauseLabel" type="Label" parent="pause"]
 pause_mode = 2
+show_behind_parent = true
 margin_left = 902.895
 margin_top = 18.1862
 margin_right = 977.895

@@ -22,13 +22,16 @@ font_data = ExtResource( 1 )
 pause_mode = 2
 z_index = 50
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 512, 292 )
 scale = Vector2( 14, 8.125 )
 texture = ExtResource( 2 )
 
-[node name="guidelines" type="Label" parent="."]
+[node name="guidelines" type="Label" parent="CanvasLayer"]
 margin_left = 160.0
 margin_top = 72.0
 margin_right = 374.0
@@ -42,7 +45,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="controls" type="Label" parent="."]
+[node name="controls" type="Label" parent="CanvasLayer"]
 margin_left = 656.0
 margin_top = 72.0
 margin_right = 870.0
@@ -56,7 +59,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="guidelines_text" type="Label" parent="."]
+[node name="guidelines_text" type="Label" parent="CanvasLayer"]
 margin_left = 144.0
 margin_top = 160.0
 margin_right = 448.0
@@ -71,7 +74,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="controls_text" type="Label" parent="."]
+[node name="controls_text" type="Label" parent="CanvasLayer"]
 margin_left = 568.0
 margin_top = 168.0
 margin_right = 896.0
@@ -86,7 +89,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="github" type="Label" parent="."]
+[node name="github" type="Label" parent="CanvasLayer"]
 margin_left = 63.0
 margin_top = 450.0
 margin_right = 962.0
@@ -101,7 +104,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="exit" type="TextureButton" parent="."]
+[node name="exit" type="TextureButton" parent="CanvasLayer"]
 margin_left = 856.0
 margin_top = 56.0
 margin_right = 928.0
