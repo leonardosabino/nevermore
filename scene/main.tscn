@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scene/main.gd" type="Script" id=2]
+[ext_resource path="res://scene/starter/starter.tscn" type="PackedScene" id=55]
+
+[node name="main" type="Node2D" groups=[
+"save",
+]]
+pause_mode = 1
+script = ExtResource( 2 )
+
+[node name="starter" parent="." instance=ExtResource( 55 )]

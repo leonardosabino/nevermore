@@ -1,0 +1,128 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scene/game/raven/raven.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/game/apple/applespawner/appleSpawner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/game/score/score.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/image/background/game.jpg" type="Texture" id=4]
+[ext_resource path="res://data/audio/game.wav" type="AudioStream" id=5]
+[ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scene/game/pauseButton.gd" type="Script" id=8]
+[ext_resource path="res://scene/game/pauseLabel.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 511.78, 3.61887 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5.21461, 300.257 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 6 )
+
+[node name="game" type="Node2D"]
+
+[node name="raven" parent="." instance=ExtResource( 1 )]
+position = Vector2( 550, 600 )
+
+[node name="score" parent="." instance=ExtResource( 3 )]
+pause_mode = 1
+position = Vector2( 29.4657, 0 )
+
+[node name="walls" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="walls"]
+position = Vector2( 512.63, 598.548 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D"]
+position = Vector2( -1.10806, 1.10812 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="walls"]
+position = Vector2( 512.973, -4.03337 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D2"]
+position = Vector2( -1.10806, 1.10812 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="walls"]
+position = Vector2( -8.34718, 300.249 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D3"]
+position = Vector2( 2.86398, 0 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="walls"]
+position = Vector2( 1025.31, 300.583 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D4"]
+position = Vector2( 2.86398, 0 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 511.576, 298.295 )
+scale = Vector2( 0.799206, 0.826712 )
+z_index = -2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="game_music" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="appleSpawner" parent="." instance=ExtResource( 2 )]
+
+[node name="pause" type="Node" parent="."]
+
+[node name="pauseLabel" type="Label" parent="pause"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 902.895
+margin_top = 18.1862
+margin_right = 977.895
+margin_bottom = 72.1862
+custom_fonts/font = SubResource( 3 )
+text = "Pause?"
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="pauseButton" type="TextureButton" parent="pause"]
+pause_mode = 2
+margin_left = 887.633
+margin_top = 21.3674
+margin_right = 1008.63
+margin_bottom = 69.3674
+mouse_default_cursor_shape = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

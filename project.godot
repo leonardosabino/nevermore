@@ -16,8 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Nevermore"
-run/main_scene="res://scenes/main.tscn"
-config/icon="res://assets/icons/raven-icon.png"
+run/main_scene="res://scene/main.tscn"
+config/icon="res://data/image/icons/raven-icon.png"
 
 [display]
 
