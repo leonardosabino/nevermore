@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scene/gameover/scoregameover/scoreGameOver.gd" type="Script" id=2]
 
 

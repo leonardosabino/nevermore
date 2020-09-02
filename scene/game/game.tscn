@@ -5,7 +5,7 @@
 [ext_resource path="res://scene/game/score/score.tscn" type="PackedScene" id=3]
 [ext_resource path="res://data/image/background/game.jpg" type="Texture" id=4]
 [ext_resource path="res://data/audio/game.wav" type="AudioStream" id=5]
-[ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scene/game/pauseButton.gd" type="Script" id=8]
 [ext_resource path="res://scene/game/pauseLabel.gd" type="Script" id=9]
 

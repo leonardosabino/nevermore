@@ -5,7 +5,7 @@
 [ext_resource path="res://scene/gameover/scoregameover/scoreGameOver.tscn" type="PackedScene" id=3]
 [ext_resource path="res://data/image/icons/dialog.png" type="Texture" id=4]
 [ext_resource path="res://scene/gameover/msg.gd" type="Script" id=5]
-[ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://data/audio/gameOver.wav" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]

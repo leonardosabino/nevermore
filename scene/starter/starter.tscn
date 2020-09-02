@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://data/image/background/starter.jpg" type="Texture" id=1]
-[ext_resource path="res://fonts/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scene/starter/starter.gd" type="Script" id=3]
 [ext_resource path="res://scene/starter/pressEnter.gd" type="Script" id=4]
 [ext_resource path="res://scene/game/pauseButton.gd" type="Script" id=5]
