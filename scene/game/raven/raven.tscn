@@ -54,9 +54,6 @@
 [ext_resource path="res://data/image/raven/right/raven-black0025.png" type="Texture" id=52]
 [ext_resource path="res://scene/game/raven/raven.gd" type="Script" id=53]
 
-
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
@@ -69,15 +66,15 @@ animations = [ {
 "name": "fly-left",
 "speed": 80.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 37 ), ExtResource( 10 ), ExtResource( 30 ), ExtResource( 15 ), ExtResource( 38 ), ExtResource( 50 ), ExtResource( 11 ), ExtResource( 51 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 27 ), ExtResource( 41 ), ExtResource( 29 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 49 ), ExtResource( 52 ) ],
-"loop": true,
-"name": "fly-right",
-"speed": 80.0
-}, {
 "frames": [ ExtResource( 35 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "dead-right",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 37 ), ExtResource( 10 ), ExtResource( 30 ), ExtResource( 15 ), ExtResource( 38 ), ExtResource( 50 ), ExtResource( 11 ), ExtResource( 51 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 27 ), ExtResource( 41 ), ExtResource( 29 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 49 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "fly-right",
+"speed": 80.0
 } ]
 
 [node name="raven" type="KinematicBody2D"]
@@ -94,7 +91,7 @@ position = Vector2( 7.79536, -48.1085 )
 scale = Vector2( 0.11297, 0.112348 )
 frames = SubResource( 1 )
 animation = "fly-right"
-frame = 22
+frame = 5
 playing = true
 __meta__ = {
 "_edit_group_": true,

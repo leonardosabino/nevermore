@@ -3,7 +3,6 @@
 [ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scene/game/score/score.gd" type="Script" id=3]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 50
 font_data = ExtResource( 2 )

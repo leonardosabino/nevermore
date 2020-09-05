@@ -1,9 +1,20 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://data/image/icons/close.png" type="Texture" id=1]
-[ext_resource path="res://data/image/icons/icon.png" type="Texture" id=2]
 [ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scene/shared/instructions/exitInstruction.gd" type="Script" id=4]
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0.0794702, 0.496689, 0.993378, 1, 2, 12 )
+colors = PoolColorArray( 0.0823529, 0.0823529, 0.0823529, 1, 0.141176, 0.0196078, 0.0196078, 1, 0.306303, 0.237633, 0.237633, 1, 0.355518, 0.302614, 0.302614, 1, 0.520661, 0.520661, 0.520661, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=8]
+gradient = SubResource( 7 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = SubResource( 8 )
+region = Rect2( 1, 1, 1, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -26,10 +37,10 @@ z_index = 50
 layer = 3
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 512, 292 )
-scale = Vector2( 14, 8.125 )
-texture = ExtResource( 2 )
+position = Vector2( 528.605, 280.97 )
+rotation = -0.0925025
+scale = Vector2( 868.907, 507.222 )
+texture = SubResource( 6 )
 
 [node name="guidelines" type="Label" parent="CanvasLayer"]
 margin_left = 160.0
@@ -41,20 +52,22 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.717647, 0.717647, 0.717647, 1 )
 text = "GUIDELINES"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
 [node name="controls" type="Label" parent="CanvasLayer"]
-margin_left = 656.0
-margin_top = 72.0
-margin_right = 870.0
-margin_bottom = 161.0
+margin_left = 611.95
+margin_top = 74.6697
+margin_right = 825.95
+margin_bottom = 163.67
 rect_pivot_offset = Vector2( -112, 16 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.717647, 0.717647, 0.717647, 1 )
 text = "CONTROLS"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
@@ -71,21 +84,23 @@ text = "- Don't let the apple touch you
 - Stay alive as long as you can
 - It gets harder every 15 seconds"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="controls_text" type="Label" parent="CanvasLayer"]
-margin_left = 568.0
+margin_left = 555.986
 margin_top = 168.0
-margin_right = 896.0
+margin_right = 942.986
 margin_bottom = 336.0
 rect_pivot_offset = Vector2( 248, 56 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.717647, 0.717647, 0.717647, 1 )
-text = "- Arrows or click to move
+text = "- Joystick or Arrows 
 - ESC to Pause
-- Enter to play again after gameover"
+- Touch or Enter to play again after gameover"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -95,12 +110,13 @@ margin_top = 450.0
 margin_right = 962.0
 margin_bottom = 561.0
 custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.733333, 0.207843, 0.207843, 1 )
+custom_colors/font_color = Color( 0.964706, 0.054902, 0.054902, 1 )
 text = "GitHub:  https://github.com/leonardosabino/nevermore
 "
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -113,5 +129,6 @@ texture_normal = ExtResource( 1 )
 expand = true
 script = ExtResource( 4 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }

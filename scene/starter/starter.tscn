@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://data/image/background/starter.jpg" type="Texture" id=1]
 [ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scene/starter/pressEnter.gd" type="Script" id=4]
 [ext_resource path="res://scene/game/pauseButton.gd" type="Script" id=5]
 [ext_resource path="res://data/audio/starter.wav" type="AudioStream" id=6]
+[ext_resource path="res://scene/starter/maxScore.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -24,6 +25,14 @@ size = 75
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_char = 5
+font_data = ExtResource( 2 )
+
 [node name="starter" type="Node2D"]
 pause_mode = 1
 script = ExtResource( 3 )
@@ -38,14 +47,14 @@ __meta__ = {
 }
 
 [node name="enter_start" type="Label" parent="."]
-margin_left = 680.515
-margin_top = 134.197
-margin_right = 986.515
-margin_bottom = 258.197
+margin_left = 681.0
+margin_top = 134.0
+margin_right = 923.0
+margin_bottom = 241.0
 rect_pivot_offset = Vector2( -112, 16 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.733333, 0.207843, 0.207843, 1 )
-text = "PRESS ENTER"
+text = "PRESS HERE"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -67,10 +76,10 @@ __meta__ = {
 }
 
 [node name="press_enter" type="TextureButton" parent="."]
-margin_left = 683.169
-margin_top = 157.708
-margin_right = 960.169
-margin_bottom = 222.708
+margin_left = 660.92
+margin_top = 156.649
+margin_right = 937.92
+margin_bottom = 221.649
 focus_mode = 1
 mouse_default_cursor_shape = 2
 enabled_focus_mode = 1
@@ -108,3 +117,18 @@ __meta__ = {
 pause_mode = 2
 stream = ExtResource( 6 )
 autoplay = true
+
+[node name="maxScore" type="Label" parent="."]
+margin_left = 150.206
+margin_top = 225.619
+margin_right = 228.206
+margin_bottom = 279.619
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.733333, 0.207843, 0.207843, 1 )
+text = "0"
+align = 1
+valign = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

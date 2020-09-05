@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scene/game/raven/raven.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/game/apple/applespawner/appleSpawner.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://data/image/background/game.jpg" type="Texture" id=4]
 [ext_resource path="res://data/audio/game.wav" type="AudioStream" id=5]
 [ext_resource path="res://data/font/zai_COVID-19VaCcine.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scene/game/joystick/joystick.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scene/game/pauseButton.gd" type="Script" id=8]
 [ext_resource path="res://scene/game/pauseLabel.gd" type="Script" id=9]
 
@@ -83,13 +84,10 @@ __meta__ = {
 }
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 511.576, 298.295 )
-scale = Vector2( 0.799206, 0.826712 )
+position = Vector2( 511.576, 300.724 )
+scale = Vector2( 0.799206, 0.835096 )
 z_index = -2
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="game_music" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
@@ -126,3 +124,6 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="joystick" parent="." instance=ExtResource( 7 )]
+position = Vector2( 160.673, 452.551 )

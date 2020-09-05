@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
 enum {LEFT, RIGHT}
-const SPEED = 500
+const SPEED = 350
 
 var motion = Vector2()
 var direction = RIGHT
 var gameOverLoad = load("res://scene/gameover/gameOver.tscn")
+onready var joystick = get_node("/root/main/game/joystick/button");
 
 func _physics_process(_delta):	
 	_move_raven();
@@ -55,17 +56,29 @@ func _move_raven():
 		move_and_slide(motion)
 		
 		if Input.is_action_pressed('click'):
-			var target = get_global_mouse_position()
-			var velocity = (target - position).normalized() * SPEED
-			if (target - position).length() > 50:
-				move_and_slide(velocity)
-				if (velocity.x > 0):
-					direction = RIGHT
-					$Sprite.play("fly-right")
-				else:
-					direction = LEFT
-					x = -1
-					$Sprite.play("fly-left")
+			var buttonPosition = joystick.get_value()
+			move_and_slide(joystick.get_value() * SPEED)
+			if (buttonPosition.x > 0):
+				direction = RIGHT
+				$Sprite.play("fly-right")
+			else:
+				direction = LEFT
+				$Sprite.play("fly-left")
+			
+#		if Input.is_action_pressed('click'):
+#			var target = get_global_mouse_position()
+#			var velocity = (target - position).normalized() * SPEED
+#			if (target - position).length() > 50:
+#				move_and_slide(velocity)
+#				if (velocity.x > 0):
+#					direction = RIGHT
+#					$Sprite.play("fly-right")
+#				else:
+#					direction = LEFT
+#					x = -1
+#					$Sprite.play("fly-left")
+
+		
 			
 	pass
 	pass

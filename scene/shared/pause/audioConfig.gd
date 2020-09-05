@@ -6,6 +6,10 @@ func _ready():
 	set_ticks_on_borders(true)
 	value = get_node("/root/main").volume
 	pass
+	
+func _process(delta):
+	get_node("/root/main").save_game()
+	pass
 
 func on_change(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)

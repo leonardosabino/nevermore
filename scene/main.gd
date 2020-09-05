@@ -37,19 +37,20 @@ func save_game():
 		"scoreMax": scoreMax,
 		"volume": volume
 	}
-	save_game.store_line(to_json(save_dict))
+	save_game.store_var(save_dict)
 	save_game.close()
-
+	
 func _exit_tree():
 	save_game()
 
 func load_game():
 	var save_game = File.new()
-	if not save_game.file_exists("user://savegame.save"):
+	if not save_game.file_exists("user://savegame.save") && save_game.get_var() != 'Null':
 		return 
 
 	save_game.open("user://savegame.save", File.READ)
-	var node_data = parse_json(save_game.get_line())
+	var node_data = save_game.get_var()
+	
 	volume = node_data["volume"]
 	scoreMax = node_data["scoreMax"]
 		
