@@ -91,7 +91,7 @@ position = Vector2( 7.79536, -48.1085 )
 scale = Vector2( 0.11297, 0.112348 )
 frames = SubResource( 1 )
 animation = "fly-right"
-frame = 5
+frame = 19
 playing = true
 __meta__ = {
 "_edit_group_": true,

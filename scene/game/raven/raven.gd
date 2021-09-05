@@ -55,7 +55,7 @@ func _move_raven():
 		motion.y = y * SPEED
 		move_and_slide(motion)
 		
-		if Input.is_action_pressed('click'):
+		if Input.is_action_pressed('click') && OS.get_name() == "Android":
 			var buttonPosition = joystick.get_value()
 			move_and_slide(joystick.get_value() * SPEED)
 			if (buttonPosition.x > 0):
@@ -65,20 +65,18 @@ func _move_raven():
 				direction = LEFT
 				$Sprite.play("fly-left")
 			
-#		if Input.is_action_pressed('click'):
-#			var target = get_global_mouse_position()
-#			var velocity = (target - position).normalized() * SPEED
-#			if (target - position).length() > 50:
-#				move_and_slide(velocity)
-#				if (velocity.x > 0):
-#					direction = RIGHT
-#					$Sprite.play("fly-right")
-#				else:
-#					direction = LEFT
-#					x = -1
-#					$Sprite.play("fly-left")
-
-		
+		if Input.is_action_pressed('click') && OS.get_name() != "Android":
+			var target = get_global_mouse_position()
+			var velocity = (target - position).normalized() * SPEED
+			if (target - position).length() > 50:
+				move_and_slide(velocity)
+				if (velocity.x > 0):
+					direction = RIGHT
+					$Sprite.play("fly-right")
+				else:
+					direction = LEFT
+					x = -1
+					$Sprite.play("fly-left")
 			
 	pass
 	pass
